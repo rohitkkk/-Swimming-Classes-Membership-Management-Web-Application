@@ -14,11 +14,6 @@ This project is a simple membership management system for swimming classes, buil
 - **Database:** MongoDB
 - **IDE:** NetBeans
 
-## Project Structure
-- **index.html:** Main form for managing members.
-- **swimmingclasses.jsp:** Handles CRUD operations with MongoDB.
-- **database/swimmingclassesdb.json:** Dataset file for MongoDB setup.
-- **netbeans-project/:** Contains all the files related to the NetBeans setup.
 
 ### Prerequisites
 - Java Development Kit (JDK)
