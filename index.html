@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swimming Classes Membership Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e8f1f2;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        h3 {
+            color: #333;
+        }
+        form {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background: #d3f9d8;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="email"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            background-color: #28a745;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+        .result {
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background: #ffeeba;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Swimming Classes Membership Management</h1>
+
+        <form method="get" action="swimmingclasses.jsp">
+            <h3>Register New Swimming Member:</h3>
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" required>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required>
+            <label for="registration_id">Registration ID:</label>
+            <input type="text" name="registration_id" id="registration_id" required>
+            <label for="mem_addr">Address:</label>
+            <input type="text" name="mem_addr" id="mem_addr" required>
+            <label for="mem_type">Membership Type:</label>
+            <input type="text" name="mem_type" id="mem_type" required>
+            <input type="hidden" name="operation" value="insert">
+            <input type="submit" value="Register Member">
+        </form>
+
+        <form method="get" action="swimmingclasses.jsp">
+            <h3>Update Swimming Member Details:</h3>
+            <label for="registration_id_update">Registration ID:</label>
+            <input type="text" name="registration_id" id="registration_id_update" required>
+            <label for="new_name">New Name:</label>
+            <input type="text" name="new_name" id="new_name">
+            <label for="new_email">New Email:</label>
+            <input type="email" name="new_email" id="new_email">
+            <label for="new_mem_addr">New Address:</label>
+            <input type="text" name="new_mem_addr" id="new_mem_addr">
+            <label for="new_mem_type">New Membership Type:</label>
+            <input type="text" name="new_mem_type" id="new_mem_type">
+            <input type="hidden" name="operation" value="update">
+            <input type="submit" value="Update Member">
+        </form>
+
+        <form method="get" action="swimmingclasses.jsp">
+            <h3>Delete Swimming Member by Registration ID:</h3>
+            <label for="registration_id_delete">Registration ID:</label>
+            <input type="text" name="registration_id" id="registration_id_delete" required>
+            <input type="hidden" name="operation" value="delete">
+            <input type="submit" value="Delete Member">
+        </form>
+
+        <form method="get" action="swimmingclasses.jsp">
+            <h3>Retrieve All Swimming Members:</h3>
+            <input type="hidden" name="operation" value="retrieve">
+            <input type="submit" value="Retrieve Members">
+        </form>
+    </div>
+</body>
+</html>
